@@ -6,5 +6,16 @@
     <string name="checkBox">Check this out</string>
     <string name="switchON">Switch on / off</string>
     <string name="hint">Type your answer here</string>
+    <string name="email_address">Enter your email address:</string>
+    <string name="hint_email">Type email here</string>
+    <string name="password">Type your password:</string>
+    <string name="login_button">LOGIN</string>
+    <string name="profile">Your Profile</string>
+    <string name="yName">Your Name</string>
+    <string name="enterName">Enter Your Name</string>
+    <string name="yEmail">Your Email</string>
+    <string name="yPicture">Your Picture</string>
+    <string name="pictureText">Click the button above to take a picture</string>
+
     <string name="todo">TODO</string>
 </resources>
