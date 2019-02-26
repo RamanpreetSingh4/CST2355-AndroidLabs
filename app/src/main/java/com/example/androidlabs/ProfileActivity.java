@@ -9,13 +9,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class ProfileActivity extends AppCompatActivity {
     EditText sEmail;
     ImageButton mImageButton;
-
+    Button gotoChat;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
     @Override
@@ -44,6 +45,20 @@ public class ProfileActivity extends AppCompatActivity {
                 }
             }
         });
+
+        gotoChat = (Button) findViewById(R.id.button5);
+
+
+        gotoChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //intent used to transfer from one activity to another
+                Intent chatIntent = new Intent(getApplicationContext(),ChatRoomActivity.class);
+                startActivity(chatIntent);
+            }
+        });
+
         Log.e(ACTIVITY_NAME,"in function: onCreate()");
     }
 
@@ -54,6 +69,8 @@ public class ProfileActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mImageButton.setImageBitmap(imageBitmap);
         }
+
+
     }
     @Override
     protected void onStart(){
