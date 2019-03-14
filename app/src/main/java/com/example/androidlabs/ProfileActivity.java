@@ -17,6 +17,7 @@ public class ProfileActivity extends AppCompatActivity {
     EditText sEmail;
     ImageButton mImageButton;
     Button gotoChat;
+    Button gotoToolbar;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
     @Override
@@ -47,7 +48,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         gotoChat = (Button) findViewById(R.id.button5);
-
+        gotoToolbar = (Button) findViewById(R.id.button2);
 
         gotoChat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +61,16 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         Log.e(ACTIVITY_NAME,"in function: onCreate()");
+
+        gotoToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //intent used to transfer from one activity to another
+                Intent toolbar = new Intent(getApplicationContext(),TestToolbar.class);
+                startActivity(toolbar);
+            }
+        });
     }
 
     @Override

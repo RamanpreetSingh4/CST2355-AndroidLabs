@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         //object for the login buttom
         loginButton = (Button)findViewById(R.id.loginButton);
-
         //Action on the click on login button
 
         loginButton.setOnClickListener(new View.OnClickListener() {

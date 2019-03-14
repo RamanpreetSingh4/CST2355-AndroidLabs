@@ -11,7 +11,9 @@
         android:layout_height="match_parent"
         android:layout_above="@id/SendBtn"
         android:layout_marginBottom="0dp"
-        android:transcriptMode="alwaysScroll">
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        android:dividerHeight="0dp">
 
     </ListView>
 

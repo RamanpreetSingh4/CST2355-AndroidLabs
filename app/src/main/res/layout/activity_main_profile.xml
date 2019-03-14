@@ -107,4 +107,10 @@
             android:text="Go To Chat" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go To Toolbar" />
+
 </LinearLayout>
