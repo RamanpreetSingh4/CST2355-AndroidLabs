@@ -17,6 +17,7 @@ public class ProfileActivity extends AppCompatActivity {
     EditText sEmail;
     ImageButton mImageButton;
     Button gotoChat;
+    Button gotoWeather;
     Button gotoToolbar;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
@@ -49,6 +50,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         gotoChat = (Button) findViewById(R.id.button5);
         gotoToolbar = (Button) findViewById(R.id.button2);
+        gotoWeather = (Button) findViewById(R.id.button4);
 
         gotoChat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +71,15 @@ public class ProfileActivity extends AppCompatActivity {
                 //intent used to transfer from one activity to another
                 Intent toolbar = new Intent(getApplicationContext(),TestToolbar.class);
                 startActivity(toolbar);
+            }
+        });
+        gotoWeather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //intent used to transfer from one activity to another
+                Intent wethear = new Intent(getApplicationContext(),weatherForecast.class);
+                startActivity(wethear);
             }
         });
     }
